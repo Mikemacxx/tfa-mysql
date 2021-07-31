@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>encrypted</key>
+	<false/>
+	<key>format</key>
+	<string>query favorites</string>
+	<key>queryFavorites</key>
+	<array>
+		<dict>
+			<key>name</key>
+			<string>TFA SET color and pcd from product_color on current</string>
+			<key>query</key>
+			<string>UPDATE items
+SET color = product_color, product_color_description = product_color where matrix_item = 'No' and DATE(`db_date_created`) = CURDATE();</string>
+		</dict>
+	</array>
+	<key>version</key>
+	<integer>1</integer>
+</dict>
+</plist>

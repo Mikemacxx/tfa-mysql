@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>encrypted</key>
+	<false/>
+	<key>format</key>
+	<string>query favorites</string>
+	<key>queryFavorites</key>
+	<array>
+		<dict>
+			<key>name</key>
+			<string>TFA Select Merch Color Fields for NS Update</string>
+			<key>query</key>
+			<string>SELECT internal_id as 'Internal ID',  display_name as 'Display Name', description as 'Sales Description', color as 'Color', `product_color_description` as 'Product Color Description', merchandise_class as 'Merchandise Class', merchandise_subclass as 'Merchandise SubClass', gender as 'Gender' from items where DATE(db_date_created) = CURDATE();</string>
+		</dict>
+	</array>
+	<key>version</key>
+	<integer>1</integer>
+</dict>
+</plist>
