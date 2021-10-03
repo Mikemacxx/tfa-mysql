@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>encrypted</key>
+	<false/>
+	<key>format</key>
+	<string>query favorites</string>
+	<key>queryFavorites</key>
+	<array>
+		<dict>
+			<key>name</key>
+			<string>TFA Pricing Table</string>
+			<key>query</key>
+			<string>
+CREATE OR REPLACE VIEW tfa_price_update AS
+SELECT internal_id AS 'Internal ID', purchase_price AS 'Purchase Price', 'Base Price (MSRP)' AS 'Item Pricing 1 Price Level', base_price AS 'Item Pricing 1 Price', 0 AS 'Item Pricing 1 Quantity', 'Dealer/Wholesale' AS 'Item Pricing 2 Price Level', dealer_wholesale AS 'Item Pricing 2 Price', 0 AS 'Item Pricing 2 Quantity','Employee Price' AS 'Item Pricing 3 Price Level', employee_price AS 'Item Pricing 3 Price', 0 AS 'Item Pricing 3 Quantity'
+FROM items WHERE DATE(db_last_update) = CURDATE();</string>
+		</dict>
+	</array>
+	<key>version</key>
+	<integer>1</integer>
+</dict>
+</plist>
